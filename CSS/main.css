@@ -1,0 +1,422 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box
+}
+body,html
+{
+    height:100%;
+    font-family:sans-serif
+}
+a
+{
+    margin:0;
+    transition:all .4s;
+    -webkit-transition:all .4s;
+    -o-transition:all .4s;
+    -moz-transition:all .4s
+}
+a:focus
+{
+    outline:none!important
+}
+a:hover
+{
+    text-decoration:none
+}
+h1,h2,h3,h4,h5,h6
+{
+    margin:0
+}
+p
+{
+    margin:0
+}
+ul,li
+{
+    margin:0;
+    list-style-type:none
+}
+input
+{
+    display:block;
+    outline:none;
+    border:none!important
+}
+textarea
+{
+    display:block;
+    outline:none
+}
+textarea:focus,input:focus
+{
+    border-color:transparent!important
+}
+button
+{
+    outline:none!important;
+    border:none;
+    background:0 0
+}
+button:hover
+{
+    cursor:pointer
+}
+iframe{
+    border:none!important
+}
+.limiter
+{
+    width:100%;
+    margin:0 auto
+}
+.container-table100
+{
+    width:100%;
+    min-height:100vh;
+    background:#131416;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:33px 30px
+}
+.wrap-table100
+{
+    width:960px;
+    border-radius:10px;
+    overflow:hidden
+}
+.table{
+    width:100%;
+    display:table;
+    margin:0
+}
+@media screen and (max-width:768px)
+{
+    .table
+    {
+        display:block
+    }
+}
+.row
+{
+    display:table-row;
+    background:rgb(255, 255, 255)
+}
+.row.header
+{    
+    color:#fff;
+    background:#2c3fca
+}
+@media screen and (max-width:768px)
+{
+    .row
+    {
+        display:block
+    }
+    .row.header
+    {
+        padding:0;
+        height:0
+    }
+    .row.header .cell
+    {
+        display:none
+    }
+    .row .cell:before
+    {
+        font-family:Poppins-Bold;
+        font-size:12px;
+        color:gray;
+        line-height:1.2;
+        text-transform:uppercase;
+        font-weight:unset!important;
+        margin-bottom:13px;
+        content:attr(data-title);
+        min-width:98px;display:block
+    }
+}
+.cell
+{
+    display:table-cell
+}
+@media screen and (max-width:768px)
+{
+    .cell
+    {
+        display:block
+    }
+}
+.row .cell
+{
+    font-family:Poppins-Regular;
+    font-size:15px;
+    color:#666;
+    line-height:1.2;
+    font-weight:unset!important;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-bottom:1px solid #f2f2f2
+}
+.row.header .cell
+{
+    font-family:Poppins-Regular;
+    font-size:18px;
+    color:#fff;
+    line-height:1.2;
+    font-weight:unset!important;
+    padding-top:19px;
+    padding-bottom:19px
+}
+.row .cell:nth-child(1)
+{
+    width:100px;
+    padding-left:40px
+}
+.row .cell:nth-child(2)
+{
+    width:330px;
+    padding-left:40px
+}
+.row .cell:nth-child(3)
+{
+    width:160px
+}
+.row .cell:nth-child(4)
+{
+    width:160px
+}
+.row .cell:nth-child(5)
+{
+    width:190px
+}
+.table,.row
+{
+    width:100%!important
+}
+@media(max-width:768px)
+{
+    .row
+    {
+        border-bottom:1px solid #f2f2f2;
+        padding-bottom:18px;
+        padding-top:30px;
+        padding-right:15px;
+        margin:0
+    }
+    .row .cell
+    {
+        border:none;
+        padding-left:30px;
+        padding-top:16px;
+        padding-bottom:16px
+    }
+    .row .cell:nth-child(1)
+    {
+        padding-left:30px
+    }
+    .row .cell
+    {
+        font-family:Poppins-Regular;
+        font-size:18px;
+        color:#555;
+        line-height:1.2;
+        font-weight:unset!important
+    }
+    .table,.row,.cell
+    {
+        width:100%!important
+    }    
+}
+
+label 
+{
+    color: #4e5dcb;
+    font-size: 18px;
+}   
+.labelClass 
+{
+    display: block;
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 13px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 23px; 
+} 
+.labelClass input 
+{
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;  
+} 
+.checkmark 
+{
+    position: absolute;
+    top: 0;
+    height: 24px; width : 24px; background-color : crimson;
+    left: 0;
+    width: 24px;
+    background-color: crimson;
+}
+.labelClass input:checked ~ .checkmark 
+{
+    background-color: #4e5dcb;
+}
+.checkmark:after 
+{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.labelClass input:checked ~ .checkmark:after
+{
+    display: block;
+}
+.labelClass .checkmark:after 
+{
+    left: 10px;
+    top: 6px;
+    -webkit-transform: rotate(46deg);
+    -ms-transform : rotate( 46deg);
+    transform : rotate( 46deg);
+    width: 6px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -ms-transform: rotate(46deg);
+    transform: rotate(46deg);
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 5px;
+}
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: #2c3fca;
+    border: 31px none #131416;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #131416;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.chat-btn {
+    position: absolute;
+    right: 14px;
+    bottom: 30px;
+    cursor: pointer
+}
+
+.chat-btn .close {
+    display: none
+}
+
+.chat-btn i {
+    transition: all 0.9s ease
+}
+
+#check:checked~.chat-btn i {
+    display: block;
+    pointer-events: auto;
+    transform: rotate(180deg)
+}
+
+#check:checked~.chat-btn .comment {
+    display: none
+}
+
+.chat-btn i {
+    font-size: 22px;
+    color: #fff !important
+}
+
+.chat-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: blue;
+    color: #fff;
+    font-size: 22px;
+    border: none
+}
+
+.wrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.4s
+}
+
+#check:checked~.wrapper {
+    opacity: 1
+}
+
+.header {
+    padding: 13px;
+    background-color: blue;
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: 10px;
+    color: #fff
+}
+
+.chat-form {
+    padding: 15px
+}
+
+.chat-form input,
+textarea,
+button {
+    margin-bottom: 10px
+}
+
+.chat-form textarea {
+    resize: none
+}
+
+.form-control:focus,
+.btn:focus {
+    box-shadow: none
+}
+
+.btn,
+.btn:focus,
+.btn:hover {
+    background-color: blue;
+    border: blue
+}
+
+#check {
+    display: none !important
+}
